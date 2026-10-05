@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c1c33" />
+  <meta name="description" content="Reserve game-day parking near Highmark Stadium in Orchard Park." />
+  <title>Orchard Reserve</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="is-login">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-back" viewBox="0 0 24 24">
+      <path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="M4 11 L12 4 L20 11 V20 H15 V14 H9 V20 H4 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24">
+      <rect x="3.5" y="6" width="17" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M9 6.5 V17.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 2"/>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="9" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5.5 19.5c1.4-3 3.6-4.5 6.5-4.5s5.1 1.5 6.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="6" y="11" width="12" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 11 V8.5 a4 4 0 0 1 8 0 V11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <div id="login" class="login">
+    <section class="login-hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="beams" aria-hidden="true"></div>
+      <div class="content">
+        <p class="eyebrow">Orchard Park</p>
+        <h1>Parking, reserved before kickoff</h1>
+        <p class="lede">Game-day lots near Highmark Stadium. Pick a home game, choose a spot, and bring your pass to the gate.</p>
+        <ul class="facts">
+          <li><strong>6</strong><span>lots</span></li>
+          <li><strong>$32</strong><span>and up</span></li>
+          <li><strong>Pass</strong><span>on your phone</span></li>
+        </ul>
+        <svg class="bowl" viewBox="0 0 640 200" aria-hidden="true">
+          <ellipse cx="320" cy="112" rx="220" ry="74" fill="#123056"/>
+          <ellipse cx="320" cy="112" rx="156" ry="48" fill="#1d4a32"/>
+          <rect x="236" y="108" width="168" height="8" rx="2" fill="rgba(255,255,255,.4)"/>
+          <circle cx="320" cy="112" r="18" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+          <path d="M300 112 H340" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+        </svg>
+      </div>
+    </section>
+    <section class="login-panel">
+      <form id="loginForm" class="login-form" action="#" novalidate>
+        <p class="eyebrow">Orchard Reserve</p>
+        <h2>Welcome back</h2>
+        <p id="loginHelp" class="lede">Access is filled in. Press Log in to continue.</p>
+        <div class="field">
+          <label for="accountId">Account ID</label>
+          <div class="control">
+            <input id="accountId" class="secret" type="text" value="********" readonly aria-readonly="true" autocomplete="off" spellcheck="false" />
+            <svg class="lock" aria-hidden="true"><use href="#i-lock"/></svg>
+          </div>
+        </div>
+        <div class="field">
+          <label for="passcode">Passcode</label>
+          <div class="control">
+            <input id="passcode" class="secret" type="text" value="********" readonly aria-readonly="true" autocomplete="off" spellcheck="false" />
+            <svg class="lock" aria-hidden="true"><use href="#i-lock"/></svg>
+          </div>
+        </div>
+        <button id="enterBtn" class="btn primary" type="submit" aria-describedby="loginHelp">Log in</button>
+      </form>
+    </section>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="wrap bar">
+        <button id="back" class="back hidden" type="button" data-action="back">
+          <svg class="ico"><use href="#i-back"/></svg>
+          <span>Back</span>
+        </button>
+        <button class="brand" type="button" data-action="nav" data-view="home">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#C8102E"/><path fill="#fff" d="M10 8h7.2C21.5 8 24 10.3 24 13.5S21.5 19 17.2 19H13.2V24H10V8zm3.2 8h3.6c1.8 0 2.9-1 2.9-2.5S18.6 11 16.8 11H13.2V16z"/></svg>
+          <span class="brand-long">Orchard Reserve</span>
+          <span class="brand-short">Orchard</span>
+        </button>
+        <nav class="desktop-nav" aria-label="Primary">
+          <button type="button" data-action="nav" data-view="home">Home</button>
+          <button type="button" data-action="nav" data-view="passes">Passes</button>
+          <button type="button" data-action="nav" data-view="account">Account</button>
+        </nav>
+        <span class="grow"></span>
+        <p class="who">Casey</p>
+      </div>
+    </header>
+    <div id="banner" class="banner hidden" role="status"></div>
+    <main id="main" class="wrap"></main>
+    <nav class="tabbar" aria-label="Primary">
+      <button class="tab" type="button" data-action="nav" data-view="home">
+        <svg class="ico"><use href="#i-home"/></svg>
+        Home
+      </button>
+      <button class="tab" type="button" data-action="nav" data-view="passes">
+        <span class="tab-ico">
+          <svg class="ico"><use href="#i-ticket"/></svg>
+          <em id="passCount" class="badge hidden">0</em>
+        </span>
+        Passes
+      </button>
+      <button class="tab" type="button" data-action="nav" data-view="account">
+        <svg class="ico"><use href="#i-user"/></svg>
+        Account
+      </button>
+    </nav>
+    <div id="paybar" class="paybar hidden"></div>
+  </div>
+
+  <div id="dialog" class="dialog hidden" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" aria-hidden="true">
+    <div class="dialog-card">
+      <h2 id="dialogTitle">Cancel this reservation?</h2>
+      <p>The spot goes back to the lot.</p>
+      <div class="action-row">
+        <button id="keepBtn" class="btn primary" type="button" data-action="close-dialog">Keep it</button>
+        <button class="btn danger" type="button" data-action="confirm-cancel">Release spot</button>
+      </div>
+    </div>
+  </div>
+
+  <p id="status" class="sr-only" aria-live="polite"></p>
+  <noscript>This demo needs JavaScript to reserve a spot.</noscript>
+  <script src="js/app.js"></script>
+</body>
+</html>
